@@ -19,16 +19,17 @@ const dashboardLink = role === 'admin' ? adminCarsIndex() : clientReservationsIn
 <template>
     <div>
         <header
-            class="sticky top-0 z-50 border-b border-gray-100 bg-white/95 shadow-sm backdrop-blur-md"
-        >
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <nav class="flex h-16 items-center justify-between">
-                    <div class="flex flex-col items-center space-x-2">
-                        <img src="/logo/logo.png" alt="logo" class="h-6" />
-                        <p class="font-bold">
-                            REAL<span class="text-orange-500">RENT</span>CAR
-                        </p>
-                    </div>
+    class="sticky top-0 z-50 border-b border-gray-100 bg-white/95 shadow-sm backdrop-blur-md"
+>
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <nav class="flex h-16 items-center justify-between">
+            <div class="flex items-center space-x-2">
+               <img src="/logo/logi.png" alt="logo" style="width: 90px; height: 65px;">
+                <p class="font-bold">
+                    RAP<span class="text-orange-500">REN</span>TAL
+                </p>
+            </div>
+
 
                     <div class="hidden items-center space-x-8 md:flex">
                         <Link 
