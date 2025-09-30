@@ -183,7 +183,7 @@ import { contact } from '@/routes'
                         <h2
                             class="mb-8 text-center text-3xl font-bold text-gray-900"
                         >
-                            Why Choose Real Rent Car?
+                            Mengapa Memilih RAP Rental?
                         </h2>
 
                         <div class="grid gap-8 md:grid-cols-2">
@@ -202,11 +202,11 @@ import { contact } from '@/routes'
                                         <h4
                                             class="mb-1 font-semibold text-gray-900"
                                         >
-                                            Premium Fleet
+                                           Armada Premium
                                         </h4>
                                         <p class="text-gray-600">
-                                            Modern, well-maintained vehicles
-                                            from top manufacturers
+                                            Kendaraan modern dan terawat baik dari produsen ternama
+                                            
                                         </p>
                                     </div>
                                 </div>
@@ -225,11 +225,12 @@ import { contact } from '@/routes'
                                         <h4
                                             class="mb-1 font-semibold text-gray-900"
                                         >
-                                            24/7 Support
+                                            Dukungan 24/7
                                         </h4>
                                         <p class="text-gray-600">
-                                            Round-the-clock customer service and
-                                            roadside assistance
+                                           Layanan pelanggan sepanjang waktu dan
+                                           bantuan di pinggir jalan
+                                            
                                         </p>
                                     </div>
                                 </div>
@@ -248,11 +249,11 @@ import { contact } from '@/routes'
                                         <h4
                                             class="mb-1 font-semibold text-gray-900"
                                         >
-                                            Flexible Booking
+                                            Pemesanan Fleksibel
                                         </h4>
                                         <p class="text-gray-600">
-                                            Easy online booking with flexible
-                                            pickup and return options
+                                            Pemesanan online mudah dengan opsi  pengambilan dan pengembalian yang fleksibel
+                                           
                                         </p>
                                     </div>
                                 </div>
@@ -273,11 +274,10 @@ import { contact } from '@/routes'
                                         <h4
                                             class="mb-1 font-semibold text-gray-900"
                                         >
-                                            Competitive Pricing
+                                            Harga Kompetitif
                                         </h4>
                                         <p class="text-gray-600">
-                                            Best rates in the market with no
-                                            hidden fees
+                                            Tarif terbaik di pasar tanpa biaya tersembunyi
                                         </p>
                                     </div>
                                 </div>
@@ -296,11 +296,11 @@ import { contact } from '@/routes'
                                         <h4
                                             class="mb-1 font-semibold text-gray-900"
                                         >
-                                            Multiple Locations
+                                            Berbagai Lokasi
                                         </h4>
                                         <p class="text-gray-600">
-                                            Convenient pickup points across the
-                                            city
+                                            Titik pengambilan yang nyaman di seluruh kota
+                                            
                                         </p>
                                     </div>
                                 </div>
@@ -319,11 +319,11 @@ import { contact } from '@/routes'
                                         <h4
                                             class="mb-1 font-semibold text-gray-900"
                                         >
-                                            Safety First
+                                            Utamakan Keselamatan
                                         </h4>
                                         <p class="text-gray-600">
-                                            All vehicles undergo rigorous safety
-                                            inspections
+                                            Semua kendaraan menjalani inspeksi
+                                            keselamatan yang ketat
                                         </p>
                                     </div>
                                 </div>
@@ -411,25 +411,23 @@ import { contact } from '@/routes'
                     class="rounded-lg bg-gray-900 p-8 text-center text-white md:p-12"
                 >
                     <h2 class="mb-4 text-3xl font-bold">
-                        Ready to Get Started?
+                        Siap Untuk Memulai?
                     </h2>
                     <p class="mx-auto mb-8 max-w-2xl text-gray-300">
-                        Experience the Real Rent Car difference today. Browse
-                        our fleet and book your perfect vehicle in just a few
-                        clicks.
+                        Dapat pengalaman perjalanan anda dengan keluarga lebih menyenangkan bersama kami <strong>RAP RENTAL</strong> 
                     </p>
                     <div class="flex flex-col justify-center gap-4 sm:flex-row">
                         <a
                             :href="fleet.url()"
                             class="rounded-lg bg-orange-500 px-8 py-3 font-semibold text-white transition-colors duration-200 hover:bg-orange-600"
                         >
-                            Browse Our Fleet
+                            Cari Kendaraan
                         </a>
                         <a
                             :href="contact.url()"
                             class="rounded-lg border-2 border-white bg-transparent px-8 py-3 font-semibold text-white transition-colors duration-200 hover:bg-white hover:text-gray-900"
                         >
-                            Contact Us
+                           kontak kami
                         </a>
                     </div>
                 </div>
