@@ -47,12 +47,11 @@ const sendTicket = () => {
                 <!-- Header Section -->
                 <div class="mb-16 text-center">
                     <h1 class="mb-4 text-4xl font-bold text-gray-900">
-                        Contact Us
+                        Kontak Kami
                     </h1>
                     <p class="mx-auto max-w-2xl text-xl text-gray-600">
-                        Have questions about our car rental services? We're here
-                        to help. Send us a message and we'll get back to you as
-                        soon as possible.
+                        Punya pertanyaan tentang layanan sewa mobil kami? Kami siap membantu. 
+                        Kirimkan pesan kepada kami dan kami akan membalas secepat mungkin.
                     </p>
                 </div>
 
@@ -63,7 +62,7 @@ const sendTicket = () => {
                             class="rounded-lg border border-gray-200 bg-white p-8 shadow-sm"
                         >
                             <h2 class="mb-6 text-2xl font-bold text-gray-900">
-                                Send us a Message
+                                Panduan Mengisi Formulir Kontak
                             </h2>
 
                             <form class="space-y-6"
@@ -75,14 +74,14 @@ const sendTicket = () => {
                                         for="name"
                                         class="mb-2 block text-sm font-semibold text-gray-700"
                                     >
-                                        Full Name
+                                        Nama Lengkap
                                     </label>
                                     <input
                                         type="text"
                                         id="name"
                                         name="name"
                                         class="w-full rounded-lg border border-gray-300 px-4 py-3 transition-colors focus:border-orange-500 focus:ring-2 focus:ring-orange-500"
-                                        placeholder="Enter your full name"
+                                        placeholder="Masukan Nama Lengkap Anda"
                                         v-model="form.name"
                                     />
                                     <span class="text-red-500" v-if="form.errors.name">{{ form.errors.name }}</span>
@@ -94,14 +93,14 @@ const sendTicket = () => {
                                         for="email"
                                         class="mb-2 block text-sm font-semibold text-gray-700"
                                     >
-                                        Email Address
+                                        Email
                                     </label>
                                     <input
                                         type="email"
                                         id="email"
                                         name="email"
                                         class="w-full rounded-lg border border-gray-300 px-4 py-3 transition-colors focus:border-orange-500 focus:ring-2 focus:ring-orange-500"
-                                        placeholder="Enter your email address"
+                                        placeholder="Masukan Alamat Email Anda"
                                         v-model="form.email"
                                     />
                                     <span class="text-red-500" v-if="form.errors.email">{{ form.errors.email }}</span>
@@ -113,14 +112,14 @@ const sendTicket = () => {
                                         for="subject"
                                         class="mb-2 block text-sm font-semibold text-gray-700"
                                     >
-                                        Subject
+                                        No Telepon
                                     </label>
                                     <input
                                         type="text"
                                         id="subject"
                                         name="subject"
                                         class="w-full rounded-lg border border-gray-300 px-4 py-3 transition-colors focus:border-orange-500 focus:ring-2 focus:ring-orange-500"
-                                        placeholder="What is this regarding?"
+                                        placeholder="+62"
                                         v-model="form.subject"
                                     />
                                     <span class="text-red-500" v-if="form.errors.subject">{{ form.errors.subject }}</span>
@@ -132,14 +131,14 @@ const sendTicket = () => {
                                         for="message"
                                         class="mb-2 block text-sm font-semibold text-gray-700"
                                     >
-                                        Message
+                                        Pesan
                                     </label>
                                     <textarea
                                         id="message"
                                         name="message"
                                         rows="6"
                                         class="resize-vertical w-full rounded-lg border border-gray-300 px-4 py-3 transition-colors focus:border-orange-500 focus:ring-2 focus:ring-orange-500"
-                                        placeholder="Tell us how we can help you..."
+                                        placeholder="Beri tahu kami apa yang anda perlukan"
                                         v-model="form.message"
                                     ></textarea>
                                     <span class="text-red-500" v-if="form.errors.message">{{ form.errors.message }}</span>
@@ -151,7 +150,7 @@ const sendTicket = () => {
                                         type="submit"
                                         class="w-full cursor-pointer rounded-lg bg-orange-500 px-6 py-3 font-semibold text-white transition-colors duration-200 hover:bg-orange-600"
                                     >
-                                        Send Message
+                                        Kirim
                                     </button>
                                 </div>
                             </form>
@@ -164,7 +163,7 @@ const sendTicket = () => {
                             class="rounded-lg border border-gray-200 bg-gray-50 p-8"
                         >
                             <h3 class="mb-6 text-xl font-bold text-gray-900">
-                                Get in Touch
+                                Kirim pesan kepada kami
                             </h3>
 
                             <div class="space-y-6">
@@ -173,10 +172,10 @@ const sendTicket = () => {
                                     <h4
                                         class="mb-2 font-semibold text-gray-900"
                                     >
-                                        Phone
+                                        No telepon
                                     </h4>
                                     <p class="text-gray-600">
-                                        +1 (555) 123-4567
+                                        +62 857-1377-2932
                                     </p>
                                 </div>
 
@@ -188,7 +187,7 @@ const sendTicket = () => {
                                         Email
                                     </h4>
                                     <p class="text-gray-600">
-                                        info@realrentcar.com
+                                        RAP@gmail.com
                                     </p>
                                 </div>
 
@@ -197,12 +196,12 @@ const sendTicket = () => {
                                     <h4
                                         class="mb-2 font-semibold text-gray-900"
                                     >
-                                        Address
+                                        Alamat
                                     </h4>
                                     <p class="text-gray-600">
-                                        123 Main Street<br />
-                                        Downtown District<br />
-                                        City, State 12345
+                                        JL.Pentul raya<br />
+                                        Kelurahan Bendan Duwur<br />
+                                        Kota, Semarang 50932
                                     </p>
                                 </div>
 
@@ -211,14 +210,14 @@ const sendTicket = () => {
                                     <h4
                                         class="mb-2 font-semibold text-gray-900"
                                     >
-                                        Business Hours
+                                        Jam Kerja
                                     </h4>
                                     <div class="space-y-1 text-gray-600">
                                         <p>
-                                            Monday - Friday: 8:00 AM - 8:00 PM
+                                            Senin - Jumat: 8:00 AM - 8:00 PM
                                         </p>
-                                        <p>Saturday: 9:00 AM - 6:00 PM</p>
-                                        <p>Sunday: 10:00 AM - 4:00 PM</p>
+                                        <p>Sabtu: 08:00 AM - 6:00 PM</p>
+                                        <p>Minggu: 08:00 AM - 4:00 PM</p>
                                     </div>
                                 </div>
                             </div>
@@ -236,13 +235,13 @@ const sendTicket = () => {
                                     :href="fleet.url()"
                                     class="block font-medium text-orange-500 transition-colors hover:text-orange-600"
                                 >
-                                    Browse Our Fleet
+                                    Cari Kendaraan Anda
                                 </a>
                                 <a
                                     :href="about.url()"
                                     class="block font-medium text-orange-500 transition-colors hover:text-orange-600"
                                 >
-                                    About Us
+                                    Tentang Kami
                                 </a>
                                 
                             </div>
