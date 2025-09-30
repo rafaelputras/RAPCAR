@@ -11,15 +11,12 @@ import { contact } from '@/routes'
                 <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
                     <div class="text-center">
                         <h1 class="mb-6 text-4xl font-bold md:text-5xl">
-                            About Real Rent Car
+                            RAP RENTAL
                         </h1>
-                        <p
-                            class="mx-auto max-w-3xl text-xl leading-relaxed text-gray-300"
-                        >
-                            Your trusted partner in premium car rental services,
-                            providing reliable transportation solutions since
-                            2015.
+                        <p class="mx-auto max-w-3xl text-xl leading-relaxed text-gray-300">
+                        Keyakinan Anda, Prioritas Kami. Jaminan Mutu dari Awal Hingga Akhir.
                         </p>
+                        
                     </div>
                 </div>
             </div>
@@ -29,26 +26,20 @@ import { contact } from '@/routes'
                     <div class="grid items-center gap-12 lg:grid-cols-2">
                         <div>
                             <h2 class="mb-6 text-3xl font-bold text-gray-900">
-                                Our Story
+                                Tentang Kami
                             </h2>
                             <div
                                 class="space-y-4 leading-relaxed text-gray-600"
                             >
                                 <p>
-                                    Founded in 2015, Real Rent Car began with a
-                                    simple mission: to provide reliable,
-                                    affordable, and convenient car rental
-                                    services to travelers and locals alike. What
-                                    started as a small fleet of 10 vehicles has
-                                    grown into a comprehensive rental service
-                                    with over 200 premium vehicles.
+                                   Didirikan sejak tahun 2018, kami telah mengumpulkan pengalaman bertahun-tahun
+                                    dalam menyediakan solusi transportasi terbaik. Kami terus tumbuh dan dipercaya
+                                     oleh ribuan pelanggan berkat komitmen kami pada <strong>kualitas</strong> dan <strong>layanan prima.</strong>
+                                
                                 </p>
                                 <p>
-                                    We understand that every journey is
-                                    important, whether it's a business trip,
-                                    family vacation, or daily commute. That's
-                                    why we've built our reputation on trust,
-                                    quality, and exceptional customer service.
+                                    Dapatkan pengalaman berkendara yang mewah dengan armada yang selalu terawat sempurna 
+                                    dan bersih tanpa cela. Kami jamin, serasa mengendarai mobil milik sendiri yang baru!
                                 </p>
                             </div>
                         </div>
@@ -60,34 +51,34 @@ import { contact } from '@/routes'
                                     >
                                         200+
                                     </div>
-                                    <div class="text-gray-600">Vehicles</div>
+                                    <div class="text-gray-600">Kendaraan</div>
                                 </div>
                                 <div>
                                     <div
                                         class="mb-2 text-3xl font-bold text-orange-500"
                                     >
-                                        50K+
+                                        100+
                                     </div>
                                     <div class="text-gray-600">
-                                        Happy Customers
+                                        Kepercayaan Pelanggan 
                                     </div>
                                 </div>
                                 <div>
                                     <div
                                         class="mb-2 text-3xl font-bold text-orange-500"
                                     >
-                                        15+
+                                        5 cabang
                                     </div>
-                                    <div class="text-gray-600">Locations</div>
+                                    <div class="text-gray-600">Cabang Lokasi</div>
                                 </div>
                                 <div>
                                     <div
                                         class="mb-2 text-3xl font-bold text-orange-500"
                                     >
-                                        9
+                                        7 tahun
                                     </div>
                                     <div class="text-gray-600">
-                                        Years Experience
+                                        Lama Beroperasi
                                     </div>
                                 </div>
                             </div>
@@ -98,13 +89,12 @@ import { contact } from '@/routes'
                 <div class="mb-20">
                     <div class="mb-12 text-center">
                         <h2 class="mb-4 text-3xl font-bold text-gray-900">
-                            Our Mission & Values
+                             Misi & Nilai Kami
                         </h2>
-                        <p class="mx-auto max-w-2xl text-gray-600">
-                            We're committed to providing exceptional car rental
-                            experiences while maintaining the highest standards
-                            of service and integrity.
-                        </p>
+                       <p class="mx-auto max-w-2xl text-gray-600 font-medium italic">
+                         Kami berkomitmen untuk menyediakan pengalaman sewa mobil yang luar biasa
+                         sambil mempertahankan standar layanan tertinggi dan integritas.
+                            </p>
                     </div>
 
                     <div class="grid gap-8 md:grid-cols-3">
@@ -125,12 +115,12 @@ import { contact } from '@/routes'
                             <h3
                                 class="mb-3 text-xl font-semibold text-gray-900"
                             >
-                                Reliability
+                                Keandalan
                             </h3>
-                            <p class="text-gray-600">
-                                Every vehicle in our fleet is regularly
-                                maintained and inspected to ensure your safety
-                                and peace of mind on every journey.
+                           <p class="text-gray-600">
+                             Setiap kendaraan dalam armada kami secara rutin
+                             dirawat dan diperiksa untuk memastikan keselamatan
+                             dan ketenangan pikiran Anda di setiap perjalanan.
                             </p>
                         </div>
 
@@ -151,12 +141,12 @@ import { contact } from '@/routes'
                             <h3
                                 class="mb-3 text-xl font-semibold text-gray-900"
                             >
-                                Transparency
+                                Tranparasi
                             </h3>
                             <p class="text-gray-600">
-                                No hidden fees, no surprises. We believe in
-                                clear, upfront pricing and honest communication
-                                with all our customers.
+                         Tanpa biaya tersembunyi, tanpa kejutan. Kami percaya pada
+                        penetapan harga yang jelas dan komunikasi yang jujur
+                        dengan semua pelanggan kami.
                             </p>
                         </div>
 
@@ -177,12 +167,12 @@ import { contact } from '@/routes'
                             <h3
                                 class="mb-3 text-xl font-semibold text-gray-900"
                             >
-                                Excellence
+                                Keunggulan
                             </h3>
-                            <p class="text-gray-600">
-                                We continuously strive to exceed expectations
-                                through superior service, quality vehicles, and
-                                innovative solutions.
+                          <p class="text-gray-600">
+                            Kami terus berupaya untuk melampaui ekspektasi
+                            melalui layanan unggul, kendaraan berkualitas, dan
+                            solusi inovatif.
                             </p>
                         </div>
                     </div>
@@ -345,12 +335,11 @@ import { contact } from '@/routes'
                 <div class="mb-20">
                     <div class="mb-12 text-center">
                         <h2 class="mb-4 text-3xl font-bold text-gray-900">
-                            Our Leadership Team
+                            Tim Kepemimpinan Kami
                         </h2>
                         <p class="mx-auto max-w-2xl text-gray-600">
-                            Meet the experienced professionals who drive our
-                            company forward and ensure exceptional service for
-                            every customer.
+                            "Temui para profesional berpengalaman yang memajukan perusahaan kami dan
+                             memastikan layanan luar biasa untuk setiap pelanggan."
                         </p>
                     </div>
 
@@ -358,60 +347,61 @@ import { contact } from '@/routes'
                         <div class="text-center">
                             <img
                                 class="mx-auto mb-4 h-32 w-32 overflow-hidden rounded-full bg-gray-200 object-cover"
-                                src="images/team/sara.webp"
+                                src="images/team/1.jpg"
                                 alt=""
                             />
                             <h4
                                 class="mb-1 text-xl font-semibold text-gray-900"
                             >
-                                Sarah Johnson
+                                Abel Wong paling sangar sak dunyo
                             </h4>
                             <p class="mb-2 font-medium text-orange-500">
                                 CEO & Founder
                             </p>
                             <p class="text-sm text-gray-600">
-                                15+ years in automotive industry with a passion
-                                for customer service excellence.
+                                20 Tahun bekerja di dunia rental 
+                                Hingga sekarang memiliki 5 cabang rental mobil.
                             </p>
                         </div>
 
                         <div class="text-center">
                             <img
                                 class="mx-auto mb-4 h-32 w-32 overflow-hidden rounded-full bg-gray-200 object-cover"
-                                src="images/team/michael.webp"
+                                src="images/team/2.jpg"
                                 alt=""
                             />
                             <h4
                                 class="mb-1 text-xl font-semibold text-gray-900"
                             >
-                                Michael Chen
+                                Slash Botol Kecap
                             </h4>
                             <p class="mb-2 font-medium text-orange-500">
-                                Operations Director
+                                Manager
                             </p>
                             <p class="text-sm text-gray-600">
-                                Expert in fleet management and logistics with 12
-                                years of industry experience.
+                                Memiliki pengalaman bekerja di dunia Bisnis 
+                                dan merupakan Lulusan UGM 
                             </p>
                         </div>
 
                         <div class="text-center">
                             <img
                                 class="mx-auto mb-4 h-32 w-32 overflow-hidden rounded-full bg-gray-200 object-cover"
-                                src="images/team/emily.webp"
+                                src="images/team/3.jpg"
                                 alt=""
                             />
                             <h4
                                 class="mb-1 text-xl font-semibold text-gray-900"
                             >
-                                Emily Rodriguez
+                                Cristiano Lionel Tegar
                             </h4>
                             <p class="mb-2 font-medium text-orange-500">
-                                Customer Success Manager
+                                Kepala toko
                             </p>
                             <p class="text-sm text-gray-600">
-                                Dedicated to ensuring every customer has an
-                                exceptional rental experience.
+                               Dengan dedikasi dan gaya bekerja keras nya 
+                               yang tinggi kini beliau dipercaya menjadi
+                               kepala toko
                             </p>
                         </div>
                     </div>

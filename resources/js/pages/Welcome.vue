@@ -81,22 +81,29 @@ const homeCars = $page.props.homeCars as Car[];
                                 <h1
                                     class="text-3xl leading-tight font-bold text-gray-900 lg:text-6xl"
                                 >
-                                    Drive Your
+                                    RAP
                                     <span
                                         class="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent"
                                     >
-                                        Dreams
+                                        Rental
                                     </span>
                                 </h1>
 
-                                <p
-                                    class="max-w-lg text-lg leading-relaxed text-gray-600"
-                                >
-                                    Experience luxury and reliability with our
-                                    premium fleet. From business meetings to
-                                    weekend adventures, find the perfect vehicle
-                                    for every journey.
+                                <div class="text-center"> <p class="max-w-xl mx-auto text-xl font-bold leading-relaxed text-gray-900 md:text-2xl">
+                                Rasakan Sensasi Mobil Baru Setiap Saat! 🚗💨
                                 </p>
+    
+                                <p class="max-w-2xl mx-auto mt-4 text-lg leading-relaxed text-gray-600">
+                                 Sewa mobil premium dengan kualitas prima, bersih, dan beraroma seperti baru keluar dari dealer. Pengalaman berkendara yang mewah tanpa rasa cemas karena kami hanya menyewakan unit dengan standar terbaik.
+                                </p>
+
+                                 <div class="mt-8">
+                                 <a href="#link-pemesanan-anda" 
+                                 class="inline-block px-8 py-3 text-lg font-semibold text-white transition duration-300 bg-red-600 rounded-lg shadow-lg hover:bg-red-700">
+                                  Pesan Sekarang & Nikmati Perjalanan Premium!
+                                  </a>
+                                  </div>
+                                 </div>
                             </div>
 
                             <div class="flex flex-col gap-4 sm:flex-row">
