@@ -60,7 +60,7 @@ const homeCars = $page.props.homeCars as Car[];
                         <div class="space-y-10">
                             <div class="space-y-6">
                                 <div
-                                    class="inline-flex items-center rounded-full bg-orange-50 px-4 py-2 text-sm font-semibold text-orange-700 ring-1 ring-orange-200"
+                                    class="inline-flex items-center rounded-full bg-blue-50 px-4 py-2 text-sm font-semibold text-blue-700 ring-1 ring-blue-200"
                                 >
                                     <svg
                                         class="mr-2 h-4 w-4"
@@ -83,7 +83,7 @@ const homeCars = $page.props.homeCars as Car[];
                                 >
                                     RAP
                                     <span
-                                        class="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent"
+                                        class="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent"
                                     >
                                         Rental
                                     </span>
@@ -99,7 +99,7 @@ const homeCars = $page.props.homeCars as Car[];
 
                                  <div class="mt-8">
                                  <a href="#link-pemesanan-anda" 
-                                 class="inline-block px-8 py-3 text-lg font-semibold text-white transition duration-300 bg-red-600 rounded-lg shadow-lg hover:bg-red-700">
+                                 class="inline-block px-8 py-3 text-lg font-semibold text-white transition duration-300 bg-red-600 rounded-lg shadow-lg hover:bg-blue-700">
                                   Pesan Sekarang & Nikmati Perjalanan Premium!
                                   </a>
                                   </div>
@@ -109,7 +109,7 @@ const homeCars = $page.props.homeCars as Car[];
                             <div class="flex flex-col gap-4 sm:flex-row">
                                 <a
                                     :href="fleet.url()"
-                                    class="group cursor-pointer inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-orange-500 to-orange-600  text-md px-5 py-2 font-semibold text-white shadow-xl transition-all duration-200 hover:scale-105 hover:from-orange-600 hover:to-orange-700 hover:shadow-2xl"
+                                    class="group cursor-pointer inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-blue-500 to-blue-600  text-md px-5 py-2 font-semibold text-white shadow-xl transition-all duration-200 hover:scale-105 hover:from-blue-600 hover:to-blue-700 hover:shadow-2xl"
                                 >
                                     <svg
                                         class="mr-2 h-5 w-5 transition-transform group-hover:translate-x-1"
@@ -128,7 +128,7 @@ const homeCars = $page.props.homeCars as Car[];
                                 </a>
                                 <a
                                     :href="about.url()"
-                                    class="inline-flex cursor-pointer items-center justify-center rounded-xl border-2 border-gray-300 bg-white text-md px-5 py-2 font-semibold text-gray-700 transition-all duration-200 hover:border-orange-500 hover:text-orange-600 hover:shadow-lg"
+                                    class="inline-flex cursor-pointer items-center justify-center rounded-xl border-2 border-gray-300 bg-white text-md px-5 py-2 font-semibold text-gray-700 transition-all duration-200 hover:border-blue-500 hover:text-blue-600 hover:shadow-lg"
                                 >
                                     Learn More
                                 </a>
@@ -140,7 +140,7 @@ const homeCars = $page.props.homeCars as Car[];
                             >
                                 <div class="text-center">
                                     <div
-                                        class="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-4xl font-bold text-transparent"
+                                        class="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-4xl font-bold text-transparent"
                                     >
                                         1000+
                                     </div>
@@ -152,7 +152,7 @@ const homeCars = $page.props.homeCars as Car[];
                                 </div>
                                 <div class="text-center">
                                     <div
-                                        class="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-4xl font-bold text-transparent"
+                                        class="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-4xl font-bold text-transparent"
                                     >
                                         150+
                                     </div>
@@ -164,7 +164,7 @@ const homeCars = $page.props.homeCars as Car[];
                                 </div>
                                 <div class="text-center">
                                     <div
-                                        class="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-4xl font-bold text-transparent"
+                                        class="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-4xl font-bold text-transparent"
                                     >
                                         24/7
                                     </div>
@@ -181,7 +181,7 @@ const homeCars = $page.props.homeCars as Car[];
                         <div class="flex justify-center lg:justify-end">
                             <div class="relative">
                                 <div
-                                    class="absolute -inset-4 rounded-3xl bg-gradient-to-r from-orange-500/20 to-orange-600/20 blur-2xl"
+                                    class="absolute -inset-4 rounded-3xl bg-gradient-to-r from-blue-500/20 to-blue-600/20 blur-2xl"
                                 ></div>
                                 <img
                                     src="/images/hero_image.png"
@@ -199,7 +199,7 @@ const homeCars = $page.props.homeCars as Car[];
                 <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div class="mb-20 text-center">
                         <div
-                            class="mb-6 inline-flex items-center rounded-full bg-orange-50 px-4 py-2 text-sm font-semibold text-orange-700 ring-1 ring-orange-200"
+                            class="mb-6 inline-flex items-center rounded-full bg-blue-50 px-4 py-2 text-sm font-semibold text-blue-700 ring-1 ring-blue-200"
                         >
                             Our Premium Collection
                         </div>
@@ -208,7 +208,7 @@ const homeCars = $page.props.homeCars as Car[];
                         >
                             Discover Our
                             <span
-                                class="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent"
+                                class="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent"
                             >
                                 Elite Fleet
                             </span>
@@ -233,7 +233,7 @@ const homeCars = $page.props.homeCars as Car[];
                     <div class="mt-16 text-center">
                         <a
                             :href="fleet.url()"
-                            class="inline-flex cursor-pointer items-center rounded-xl bg-gradient-to-r from-orange-500 to-orange-600 px-8 py-4 font-semibold text-white shadow-xl transition-all duration-200 hover:scale-105 hover:from-orange-600 hover:to-orange-700 hover:shadow-2xl"
+                            class="inline-flex cursor-pointer items-center rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 px-8 py-4 font-semibold text-white shadow-xl transition-all duration-200 hover:scale-105 hover:from-blue-600 hover:to-blue-700 hover:shadow-2xl"
                         >
                             <svg
                                 class="mr-2 h-5 w-5"
@@ -263,7 +263,7 @@ const homeCars = $page.props.homeCars as Car[];
                         >
                             Why Choose
                             <span
-                                class="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent"
+                                class="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent"
                             >
                                 RealRent </span
                             >?
@@ -278,7 +278,7 @@ const homeCars = $page.props.homeCars as Car[];
                     <div class="grid gap-12 md:grid-cols-3">
                         <div class="group text-center">
                             <div
-                                class="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-orange-500 to-orange-600 shadow-xl transition-transform duration-200 group-hover:scale-110"
+                                class="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 shadow-xl transition-transform duration-200 group-hover:scale-110"
                             >
                                 <svg
                                     class="h-10 w-10 text-white"
@@ -306,7 +306,7 @@ const homeCars = $page.props.homeCars as Car[];
 
                         <div class="group text-center">
                             <div
-                                class="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-orange-500 to-orange-600 shadow-xl transition-transform duration-200 group-hover:scale-110"
+                                class="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 shadow-xl transition-transform duration-200 group-hover:scale-110"
                             >
                                 <svg
                                     class="h-10 w-10 text-white"
@@ -334,7 +334,7 @@ const homeCars = $page.props.homeCars as Car[];
 
                         <div class="group text-center">
                             <div
-                                class="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-orange-500 to-orange-600 shadow-xl transition-transform duration-200 group-hover:scale-110"
+                                class="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 shadow-xl transition-transform duration-200 group-hover:scale-110"
                             >
                                 <svg
                                     class="h-10 w-10 text-white"

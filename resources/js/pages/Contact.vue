@@ -80,7 +80,7 @@ const sendTicket = () => {
                                         type="text"
                                         id="name"
                                         name="name"
-                                        class="w-full rounded-lg border border-gray-300 px-4 py-3 transition-colors focus:border-orange-500 focus:ring-2 focus:ring-orange-500"
+                                        class="w-full rounded-lg border border-gray-300 px-4 py-3 transition-colors focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
                                         placeholder="Masukan Nama Lengkap Anda"
                                         v-model="form.name"
                                     />
@@ -99,7 +99,7 @@ const sendTicket = () => {
                                         type="email"
                                         id="email"
                                         name="email"
-                                        class="w-full rounded-lg border border-gray-300 px-4 py-3 transition-colors focus:border-orange-500 focus:ring-2 focus:ring-orange-500"
+                                        class="w-full rounded-lg border border-gray-300 px-4 py-3 transition-colors focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
                                         placeholder="Masukan Alamat Email Anda"
                                         v-model="form.email"
                                     />
@@ -118,7 +118,7 @@ const sendTicket = () => {
                                         type="text"
                                         id="subject"
                                         name="subject"
-                                        class="w-full rounded-lg border border-gray-300 px-4 py-3 transition-colors focus:border-orange-500 focus:ring-2 focus:ring-orange-500"
+                                        class="w-full rounded-lg border border-gray-300 px-4 py-3 transition-colors focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
                                         placeholder="+62"
                                         v-model="form.subject"
                                     />
@@ -137,7 +137,7 @@ const sendTicket = () => {
                                         id="message"
                                         name="message"
                                         rows="6"
-                                        class="resize-vertical w-full rounded-lg border border-gray-300 px-4 py-3 transition-colors focus:border-orange-500 focus:ring-2 focus:ring-orange-500"
+                                        class="resize-vertical w-full rounded-lg border border-gray-300 px-4 py-3 transition-colors focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
                                         placeholder="Beri tahu kami apa yang anda perlukan"
                                         v-model="form.message"
                                     ></textarea>
@@ -148,7 +148,7 @@ const sendTicket = () => {
                                 <div>
                                     <button
                                         type="submit"
-                                        class="w-full cursor-pointer rounded-lg bg-orange-500 px-6 py-3 font-semibold text-white transition-colors duration-200 hover:bg-orange-600"
+                                        class="w-full cursor-pointer rounded-lg bg-blue-500 px-6 py-3 font-semibold text-white transition-colors duration-200 hover:bg-blue-600"
                                     >
                                         Kirim
                                     </button>
@@ -233,13 +233,13 @@ const sendTicket = () => {
                             <div class="space-y-3">
                                 <a
                                     :href="fleet.url()"
-                                    class="block font-medium text-orange-500 transition-colors hover:text-orange-600"
+                                    class="block font-medium text-blue-500 transition-colors hover:text-blue-600"
                                 >
                                     Cari Kendaraan Anda
                                 </a>
                                 <a
                                     :href="about.url()"
-                                    class="block font-medium text-orange-500 transition-colors hover:text-orange-600"
+                                    class="block font-medium text-blue-500 transition-colors hover:text-blue-600"
                                 >
                                     Tentang Kami
                                 </a>

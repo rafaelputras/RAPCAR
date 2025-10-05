@@ -3,6 +3,7 @@ import CarCard from '@/components/CarCard.vue';
 import HomeLayout from '@/layouts/HomeLayout.vue';
 import { router, usePage } from '@inertiajs/vue3';
 import { computed, ref, watch } from 'vue';
+import type { PageProps } from '../types';
 
 const $page = usePage<PageProps>();
 const cars = computed(() => $page.props.cars);
@@ -119,7 +120,7 @@ const hasActiveFilters = computed(() => {
                 >
                     <div class="relative">
                         <div
-                            class="h-8 w-8 animate-spin rounded-full border-4 border-orange-200 border-t-orange-500"
+                            class="h-8 w-8 animate-spin rounded-full border-4 border-blue-200 border-t-blue-500"
                         ></div>
                     </div>
                     <span class="text-lg font-medium text-gray-700"
@@ -138,14 +139,14 @@ const hasActiveFilters = computed(() => {
                         <div class="mb-6 lg:hidden">
                             <button
                                 @click="showFilters = !showFilters"
-                                class="group flex w-full items-center justify-between rounded-2xl border border-gray-200 bg-white px-6 py-4 text-left font-semibold text-gray-700 shadow-sm transition-all duration-200 hover:border-orange-200 hover:shadow-md"
+                                class="group flex w-full items-center justify-between rounded-2xl border border-gray-200 bg-white px-6 py-4 text-left font-semibold text-gray-700 shadow-sm transition-all duration-200 hover:border-blue-200 hover:shadow-md"
                             >
                                 <span class="flex items-center">
                                     <div
-                                        class="mr-3 rounded-lg bg-orange-100 p-2 transition-colors group-hover:bg-orange-200"
+                                        class="mr-3 rounded-lg bg-blue-100 p-2 transition-colors group-hover:bg-blue-200"
                                     >
                                         <svg
-                                            class="h-5 w-5 text-orange-600"
+                                            class="h-5 w-5 text-blue-600"
                                             fill="none"
                                             stroke="currentColor"
                                             viewBox="0 0 24 24"
@@ -161,7 +162,7 @@ const hasActiveFilters = computed(() => {
                                     Filters & Search
                                     <span
                                         v-if="hasActiveFilters"
-                                        class="ml-2 rounded-full bg-orange-500 px-2 py-1 text-xs text-white"
+                                        class="ml-2 rounded-full bg-blue-500 px-2 py-1 text-xs text-white"
                                         >{{
                                             Object.values({
                                                 searchQuery: searchQuery.trim(),
@@ -205,7 +206,7 @@ const hasActiveFilters = computed(() => {
                                             v-model="searchQuery"
                                             type="text"
                                             placeholder="Search by make, model, or features..."
-                                            class="w-full rounded-xl border border-gray-300 py-2 pr-4 pl-12 text-gray-900 placeholder-gray-500 transition-all duration-200 focus:border-orange-500 focus:ring-4 focus:ring-orange-100"
+                                            class="w-full rounded-xl border border-gray-300 py-2 pr-4 pl-12 text-gray-900 placeholder-gray-500 transition-all duration-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
                                             @keydown.enter="handleSearch"
                                         />
                                         <svg
@@ -224,7 +225,7 @@ const hasActiveFilters = computed(() => {
                                     </div>
                                     <button
                                         type="submit"
-                                        class="w-full rounded-xl bg-gradient-to-r from-orange-500 to-orange-600 px-6 py-2 font-semibold text-white shadow-lg transition-all duration-200 hover:from-orange-600 hover:to-orange-700 hover:shadow-xl focus:ring-4 focus:ring-orange-200"
+                                        class="w-full rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 px-6 py-2 font-semibold text-white shadow-lg transition-all duration-200 hover:from-blue-600 hover:to-blue-700 hover:shadow-xl focus:ring-4 focus:ring-blue-200"
                                     >
                                         Search Fleet
                                     </button>
@@ -241,7 +242,7 @@ const hasActiveFilters = computed(() => {
                                         >
                                         <select
                                             v-model="selectedMake"
-                                            class="w-full rounded-xl border border-gray-300 px-4 py-2 text-gray-900 transition-all duration-200 focus:border-orange-500 focus:ring-4 focus:ring-orange-100"
+                                            class="w-full rounded-xl border border-gray-300 px-4 py-2 text-gray-900 transition-all duration-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
                                         >
                                             <option value="">All Makes</option>
                                             <option
@@ -262,7 +263,7 @@ const hasActiveFilters = computed(() => {
                                         >
                                         <select
                                             v-model="selectedFuelType"
-                                            class="w-full rounded-xl border border-gray-300 px-4 py-2 text-gray-900 transition-all duration-200 focus:border-orange-500 focus:ring-4 focus:ring-orange-100"
+                                            class="w-full rounded-xl border border-gray-300 px-4 py-2 text-gray-900 transition-all duration-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
                                         >
                                             <option value="">
                                                 All Fuel Types
@@ -290,7 +291,7 @@ const hasActiveFilters = computed(() => {
                                         >
                                         <select
                                             v-model="selectedYear"
-                                            class="w-full rounded-xl border border-gray-300 px-4 py-2 text-gray-900 transition-all duration-200 focus:border-orange-500 focus:ring-4 focus:ring-orange-100"
+                                            class="w-full rounded-xl border border-gray-300 px-4 py-2 text-gray-900 transition-all duration-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
                                         >
                                             <option value="">All Years</option>
                                             <option
@@ -319,7 +320,7 @@ const hasActiveFilters = computed(() => {
                                                     v-model="minPrice"
                                                     type="number"
                                                     placeholder="Min"
-                                                    class="w-full rounded-xl border border-gray-300 py-2 pr-4 pl-8 text-gray-900 transition-all duration-200 focus:border-orange-500 focus:ring-4 focus:ring-orange-100"
+                                                    class="w-full rounded-xl border border-gray-300 py-2 pr-4 pl-8 text-gray-900 transition-all duration-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
                                                 />
                                             </div>
                                             <div class="relative">
@@ -331,7 +332,7 @@ const hasActiveFilters = computed(() => {
                                                     v-model="maxPrice"
                                                     type="number"
                                                     placeholder="Max"
-                                                    class="w-full rounded-xl border border-gray-300 py-2 pr-4 pl-8 text-gray-900 transition-all duration-200 focus:border-orange-500 focus:ring-4 focus:ring-orange-100"
+                                                    class="w-full rounded-xl border border-gray-300 py-2 pr-4 pl-8 text-gray-900 transition-all duration-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
                                                 />
                                             </div>
                                         </div>
@@ -345,7 +346,7 @@ const hasActiveFilters = computed(() => {
                             >
                                 <button
                                     @click="applyFilters"
-                                    class="w-full rounded-xl bg-gradient-to-r from-orange-500 to-orange-600 px-6 py-2 font-semibold text-white shadow-lg transition-all duration-200 hover:from-orange-600 hover:to-orange-700 hover:shadow-xl focus:ring-4 focus:ring-orange-200"
+                                    class="w-full rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 px-6 py-2 font-semibold text-white shadow-lg transition-all duration-200 hover:from-blue-600 hover:to-blue-700 hover:shadow-xl focus:ring-4 focus:ring-blue-200"
                                 >
                                     Apply Filters
                                 </button>
@@ -391,7 +392,7 @@ const hasActiveFilters = computed(() => {
                                     >
                                     <div class="h-4 w-px bg-gray-300"></div>
                                     <span
-                                        class="rounded-full bg-orange-100 px-3 py-1 font-medium text-orange-700"
+                                        class="rounded-full bg-blue-100 px-3 py-1 font-medium text-blue-700"
                                     >
                                         {{ cars.data.length }} shown
                                     </span>
@@ -447,7 +448,7 @@ const hasActiveFilters = computed(() => {
                             </p>
                             <button
                                 @click="clearFilters"
-                                class="rounded-xl bg-gradient-to-r from-orange-500 to-orange-600 px-8 py-3 font-semibold text-white shadow-lg transition-all duration-200 hover:from-orange-600 hover:to-orange-700"
+                                class="rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 px-8 py-3 font-semibold text-white shadow-lg transition-all duration-200 hover:from-blue-600 hover:to-blue-700"
                             >
                                 View All Vehicles
                             </button>
@@ -468,7 +469,7 @@ const hasActiveFilters = computed(() => {
                                     <button
                                         v-if="cars.current_page > 1"
                                         @click="goToPage(cars.links[0].url)"
-                                        class="rounded-xl bg-gradient-to-r from-orange-500 to-orange-600 px-6 py-3 font-semibold text-white shadow-lg transition-all duration-200 hover:from-orange-600 hover:to-orange-700"
+                                        class="rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 px-6 py-3 font-semibold text-white shadow-lg transition-all duration-200 hover:from-blue-600 hover:to-blue-700"
                                     >
                                         Previous
                                     </button>
@@ -489,7 +490,7 @@ const hasActiveFilters = computed(() => {
                                                 ].url,
                                             )
                                         "
-                                        class="rounded-xl bg-gradient-to-r from-orange-500 to-orange-600 px-6 py-3 font-semibold text-white shadow-lg transition-all duration-200 hover:from-orange-600 hover:to-orange-700"
+                                        class="rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 px-6 py-3 font-semibold text-white shadow-lg transition-all duration-200 hover:from-blue-600 hover:to-blue-700"
                                     >
                                         Next
                                     </button>
@@ -505,7 +506,7 @@ const hasActiveFilters = computed(() => {
                                         @click="goToPage(link.url)"
                                         :disabled="!link.url"
                                         :class="{
-                                            'bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg':
+                                            'bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-lg':
                                                 link.active,
                                             'border-gray-300 bg-white text-gray-700 hover:bg-gray-50':
                                                 !link.active && link.url,

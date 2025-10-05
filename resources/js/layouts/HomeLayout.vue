@@ -26,7 +26,7 @@ const dashboardLink = role === 'admin' ? adminCarsIndex() : clientReservationsIn
             <div class="flex items-center space-x-2">
                <img src="/logo/logi.png" alt="logo" style="width: 90px; height: 65px;">
                 <p class="font-bold">
-                    RAP<span class="text-orange-500">REN</span>TAL
+                    RAP<span class="text-blue-500">REN</span>TAL
                 </p>
             </div>
 
@@ -34,29 +34,29 @@ const dashboardLink = role === 'admin' ? adminCarsIndex() : clientReservationsIn
                     <div class="hidden items-center space-x-8 md:flex">
                         <Link 
                             :href="home()" 
-                            :class="{ 'text-orange-500': $page.url === home().url, 'text-gray-700': $page.url !== home().url }" 
-                            class="font-medium transition-colors hover:text-orange-500"
+                            :class="{ 'text-blue-500': $page.url === home().url, 'text-gray-700': $page.url !== home().url }" 
+                            class="font-medium transition-colors hover:text-blue-500"
                         >
                             Beranda
                         </Link>
                         <Link 
                             :href="fleet()" 
-                            :class="{ 'text-orange-500': $page.url.startsWith('/fleet'), 'text-gray-700': !$page.url.startsWith('/fleet') }" 
-                            class="font-medium transition-colors hover:text-orange-500"
+                            :class="{ 'text-blue-500': $page.url.startsWith('/fleet'), 'text-gray-700': !$page.url.startsWith('/fleet') }" 
+                            class="font-medium transition-colors hover:text-blue-500"
                         >
                             Armada
                         </Link>
                         <Link 
                             :href="about()" 
-                            :class="{ 'text-orange-500': $page.url === '/about', 'text-gray-700': $page.url !== '/about' }" 
-                            class="font-medium transition-colors hover:text-orange-500"
+                            :class="{ 'text-blue-500': $page.url === '/about', 'text-gray-700': $page.url !== '/about' }" 
+                            class="font-medium transition-colors hover:text-blue-500"
                         >
                             Tentang Kami
                         </Link>
                         <Link 
                             :href="contact()" 
-                            :class="{ 'text-orange-500': $page.url === '/contact', 'text-gray-700': $page.url !== '/contact' }" 
-                            class="font-medium transition-colors hover:text-orange-500"
+                            :class="{ 'text-blue-500': $page.url === '/contact', 'text-gray-700': $page.url !== '/contact' }" 
+                            class="font-medium transition-colors hover:text-blue-500"
                         >
                             Kontak
                         </Link>
@@ -86,13 +86,13 @@ const dashboardLink = role === 'admin' ? adminCarsIndex() : clientReservationsIn
                         <template v-else>
                             <Link
                                 :href="login()"
-                                class="inline-flex items-center px-6 py-2.5 text-sm font-semibold text-gray-700 transition-colors duration-200 hover:text-orange-600"
+                                class="inline-flex items-center px-6 py-2.5 text-sm font-semibold text-gray-700 transition-colors duration-200 hover:text-blue-600"
                             >
                                 Masuk
                             </Link>
                             <Link
                                 :href="register()"
-                                class="inline-flex items-center rounded-xl bg-gradient-to-r from-orange-500 to-orange-600 px-6 py-2.5 text-sm font-semibold text-white shadow-lg transition-all duration-200 hover:scale-105 hover:from-orange-600 hover:to-orange-700 hover:shadow-xl"
+                                class="inline-flex items-center rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 px-6 py-2.5 text-sm font-semibold text-white shadow-lg transition-all duration-200 hover:scale-105 hover:from-blue-600 hover:to-blue-700 hover:shadow-xl"
                             >
                                 Mulai Sekarang
                             </Link>
@@ -110,7 +110,7 @@ const dashboardLink = role === 'admin' ? adminCarsIndex() : clientReservationsIn
                     <div class="space-y-6">
                         <div class="flex items-center space-x-2">
                             <div
-                                class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-orange-500 to-orange-600"
+                                class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-blue-600"
                             >
                                 <svg
                                     class="h-6 w-6 text-white"
@@ -128,7 +128,7 @@ const dashboardLink = role === 'admin' ? adminCarsIndex() : clientReservationsIn
                             </div>
                             <div>
                                 <h3 class="text-xl font-bold">
-                                    Rap<span class="text-orange-500"
+                                    Rap<span class="text-blue-500"
                                         >RENTAL</span
                                     >
                                 </h3>
@@ -150,28 +150,28 @@ const dashboardLink = role === 'admin' ? adminCarsIndex() : clientReservationsIn
                             <li>
                                 <a
                                     href="#"
-                                    class="transition-colors hover:text-orange-500"
+                                    class="transition-colors hover:text-blue-500"
                                     >Sewa Cepat</a
                                 >
                             </li>
                             <li>
                                 <a
                                     href="#"
-                                    class="transition-colors hover:text-orange-500"
+                                    class="transition-colors hover:text-blue-500"
                                     >Sewa Jangka Panjang</a
                                 >
                             </li>
                             <li>
                                 <a
                                     href="#"
-                                    class="transition-colors hover:text-orange-500"
+                                    class="transition-colors hover:text-blue-500"
                                     >Solusi Korporat</a
                                 >
                             </li>
                             <li>
                                 <a
                                     href="#"
-                                    class="transition-colors hover:text-orange-500"
+                                    class="transition-colors hover:text-blue-500"
                                     >Transfer Bandara</a
                                 >
                             </li>
@@ -184,28 +184,28 @@ const dashboardLink = role === 'admin' ? adminCarsIndex() : clientReservationsIn
                             <li>
                                 <a
                                     :href="contact.url()"
-                                    class="transition-colors hover:text-orange-500"
+                                    class="transition-colors hover:text-blue-500"
                                     >Kontak Kami</a
                                 >
                             </li>
                             <li>
                                 <a
                                     href="#"
-                                    class="transition-colors hover:text-orange-500"
+                                    class="transition-colors hover:text-blue-500"
                                     >Pusat Bantuan</a
                                 >
                             </li>
                             <li>
                                 <a
                                     href="#"
-                                    class="transition-colors hover:text-orange-500"
+                                    class="transition-colors hover:text-blue-500"
                                     >Syarat & Ketentuan</a
                                 >
                             </li>
                             <li>
                                 <a
                                     href="#"
-                                    class="transition-colors hover:text-orange-500"
+                                    class="transition-colors hover:text-blue-500"
                                     >Kebijakan Privasi</a
                                 >
                             </li>
@@ -217,7 +217,7 @@ const dashboardLink = role === 'admin' ? adminCarsIndex() : clientReservationsIn
                         <div class="space-y-3 text-gray-400">
                             <div class="flex items-center space-x-3">
                                 <svg
-                                    class="h-5 w-5 text-orange-500"
+                                    class="h-5 w-5 text-blue-500"
                                     fill="none"
                                     stroke="currentColor"
                                     viewBox="0 0 24 24"
@@ -233,7 +233,7 @@ const dashboardLink = role === 'admin' ? adminCarsIndex() : clientReservationsIn
                             </div>
                             <div class="flex items-center space-x-3">
                                 <svg
-                                    class="h-5 w-5 text-orange-500"
+                                    class="h-5 w-5 text-blue-500"
                                     fill="none"
                                     stroke="currentColor"
                                     viewBox="0 0 24 24"
@@ -249,7 +249,7 @@ const dashboardLink = role === 'admin' ? adminCarsIndex() : clientReservationsIn
                             </div>
                             <div class="flex items-center space-x-3">
                                 <svg
-                                    class="h-5 w-5 text-orange-500"
+                                    class="h-5 w-5 text-blue-500"
                                     fill="none"
                                     stroke="currentColor"
                                     viewBox="0 0 24 24"

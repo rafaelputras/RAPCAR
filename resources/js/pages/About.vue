@@ -47,7 +47,7 @@ import { contact } from '@/routes'
                             <div class="grid grid-cols-2 gap-6 text-center">
                                 <div>
                                     <div
-                                        class="mb-2 text-3xl font-bold text-orange-500"
+                                        class="mb-2 text-3xl font-bold text-blue-500"
                                     >
                                         200+
                                     </div>
@@ -55,7 +55,7 @@ import { contact } from '@/routes'
                                 </div>
                                 <div>
                                     <div
-                                        class="mb-2 text-3xl font-bold text-orange-500"
+                                        class="mb-2 text-3xl font-bold text-blue-500"
                                     >
                                         100+
                                     </div>
@@ -65,7 +65,7 @@ import { contact } from '@/routes'
                                 </div>
                                 <div>
                                     <div
-                                        class="mb-2 text-3xl font-bold text-orange-500"
+                                        class="mb-2 text-3xl font-bold text-blue-500"
                                     >
                                         5 cabang
                                     </div>
@@ -73,7 +73,7 @@ import { contact } from '@/routes'
                                 </div>
                                 <div>
                                     <div
-                                        class="mb-2 text-3xl font-bold text-orange-500"
+                                        class="mb-2 text-3xl font-bold text-blue-500"
                                     >
                                         7 tahun
                                     </div>
@@ -100,7 +100,7 @@ import { contact } from '@/routes'
                     <div class="grid gap-8 md:grid-cols-3">
                         <div class="p-6 text-center">
                             <div
-                                class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-orange-500"
+                                class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-blue-500"
                             >
                                 <svg
                                     class="h-8 w-8 fill-white"
@@ -126,7 +126,7 @@ import { contact } from '@/routes'
 
                         <div class="p-6 text-center">
                             <div
-                                class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-orange-500"
+                                class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-blue-500"
                             >
                                 <svg
                                     class="h-8 w-8 fill-white"
@@ -152,7 +152,7 @@ import { contact } from '@/routes'
 
                         <div class="p-6 text-center">
                             <div
-                                class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-orange-500"
+                                class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-blue-500"
                             >
                                 <svg
                                     class="h-8 w-8 fill-white"
@@ -190,7 +190,7 @@ import { contact } from '@/routes'
                             <div class="space-y-6">
                                 <div class="flex items-start space-x-4">
                                     <svg
-                                        class="h-8 w-8 fill-orange-500"
+                                        class="h-8 w-8 fill-blue-500"
                                         xmlns="http://www.w3.org/2000/svg"
                                         viewBox="0 0 640 640"
                                     >
@@ -213,7 +213,7 @@ import { contact } from '@/routes'
 
                                 <div class="flex items-start space-x-4">
                                     <svg
-                                        class="h-8 w-8 fill-orange-500"
+                                        class="h-8 w-8 fill-blue-500"
                                         xmlns="http://www.w3.org/2000/svg"
                                         viewBox="0 0 640 640"
                                     >
@@ -237,7 +237,7 @@ import { contact } from '@/routes'
 
                                 <div class="flex items-start space-x-4">
                                     <svg
-                                        class="h-8 w-8 fill-orange-500"
+                                        class="h-8 w-8 fill-blue-500"
                                         xmlns="http://www.w3.org/2000/svg"
                                         viewBox="0 0 640 640"
                                     >
@@ -262,7 +262,7 @@ import { contact } from '@/routes'
                             <div class="space-y-6">
                                 <div class="flex items-start space-x-4">
                                     <svg
-                                        class="h-8 w-8 fill-orange-500"
+                                        class="h-8 w-8 fill-blue-500"
                                         xmlns="http://www.w3.org/2000/svg"
                                         viewBox="0 0 640 640"
                                     >
@@ -284,7 +284,7 @@ import { contact } from '@/routes'
 
                                 <div class="flex items-start space-x-4">
                                     <svg
-                                        class="h-8 w-8 fill-orange-500"
+                                        class="h-8 w-8 fill-blue-500"
                                         xmlns="http://www.w3.org/2000/svg"
                                         viewBox="0 0 640 640"
                                     >
@@ -307,7 +307,7 @@ import { contact } from '@/routes'
 
                                 <div class="flex items-start space-x-4">
                                     <svg
-                                        class="h-8 w-8 fill-orange-500"
+                                        class="h-8 w-8 fill-blue-500"
                                         xmlns="http://www.w3.org/2000/svg"
                                         viewBox="0 0 640 640"
                                     >
@@ -355,7 +355,7 @@ import { contact } from '@/routes'
                             >
                                 Abel Wong paling sangar sak dunyo
                             </h4>
-                            <p class="mb-2 font-medium text-orange-500">
+                            <p class="mb-2 font-medium text-blue-500">
                                 CEO & Founder
                             </p>
                             <p class="text-sm text-gray-600">
@@ -375,7 +375,7 @@ import { contact } from '@/routes'
                             >
                                 Slash Botol Kecap
                             </h4>
-                            <p class="mb-2 font-medium text-orange-500">
+                            <p class="mb-2 font-medium text-blue-500">
                                 Manager
                             </p>
                             <p class="text-sm text-gray-600">
@@ -395,7 +395,7 @@ import { contact } from '@/routes'
                             >
                                 Cristiano Lionel Tegar
                             </h4>
-                            <p class="mb-2 font-medium text-orange-500">
+                            <p class="mb-2 font-medium text-blue-500">
                                 Kepala toko
                             </p>
                             <p class="text-sm text-gray-600">
@@ -419,7 +419,7 @@ import { contact } from '@/routes'
                     <div class="flex flex-col justify-center gap-4 sm:flex-row">
                         <a
                             :href="fleet.url()"
-                            class="rounded-lg bg-orange-500 px-8 py-3 font-semibold text-white transition-colors duration-200 hover:bg-orange-600"
+                            class="rounded-lg bg-blue-500 px-8 py-3 font-semibold text-white transition-colors duration-200 hover:bg-blue-600"
                         >
                             Cari Kendaraan
                         </a>

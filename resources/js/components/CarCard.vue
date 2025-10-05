@@ -40,12 +40,12 @@ defineProps<Props>();
 
             <!-- Price Badge -->
             <div
-                class="absolute top-4 right-4 rounded-xl bg-gradient-to-r from-orange-500 to-orange-600 px-4 py-2 shadow-lg"
+                class="absolute top-4 right-4 rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 px-4 py-2 shadow-lg"
             >
                 <span class="text-sm font-bold text-white"
                     >${{ car.price_per_day }}</span
                 >
-                <span class="text-xs text-orange-100">/day</span>
+                <span class="text-xs text-blue-100">/day</span>
             </div>
 
             <!-- Gradient Overlay -->
@@ -59,7 +59,7 @@ defineProps<Props>();
             <!-- Header -->
             <div class="space-y-2">
                 <h3
-                    class="text-xl font-bold text-gray-900 transition-colors group-hover:text-orange-600"
+                    class="text-xl font-bold text-gray-900 transition-colors group-hover:text-blue-600"
                 >
                     {{ car.make }} {{ car.model }} - {{ car.year }} - {{ car.id }}
                 </h3>
@@ -67,7 +67,7 @@ defineProps<Props>();
                 <div class="flex items-center gap-2">
                     <div class="flex items-center gap-1 capitalize">
                         <svg
-                            class="h-4 w-4 text-orange-500"
+                            class="h-4 w-4 text-blue-500"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -99,10 +99,10 @@ defineProps<Props>();
         <div class=" p-4">
             <button
                 @click="bookCar(car.id)"
-                class="group/btn w-full cursor-pointer rounded-xl bg-gradient-to-r from-slate-700 to-slate-900 px-6 py-3.5 font-semibold text-white shadow-lg transition-all duration-200 hover:from-orange-600 hover:to-orange-700 focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:outline-none"
+                class="group/btn w-full cursor-pointer rounded-xl bg-gradient-to-r from-slate-700 to-slate-900 px-6 py-3.5 font-semibold text-white shadow-lg transition-all duration-200 hover:from-blue-600 hover:to-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none"
             >
                 <span
-                    class="flex items-center justify-center gap-2 text-orange-500 group-hover:text-white"
+                    class="flex items-center justify-center gap-2 text-blue-500 group-hover:text-white"
                 >
                     <svg
                         class="h-5 w-5 transition-transform group-hover/btn:scale-110"
