@@ -25,12 +25,13 @@ class ReservationsController extends Controller
     {
         $status = $request->input('status');
 
-        // Status counts for filter chips
+        // Hitung jumlah per status
         $statusCounts = Reservation::selectRaw('status, count(*) as count')
             ->groupBy('status')
             ->pluck('count', 'status')
             ->toArray();
 
+        // Ambil data reservasi
         $reservations = Reservation::query()
             ->with([
                 'user:id,name,email',
@@ -55,8 +56,20 @@ class ReservationsController extends Controller
             })
             ->orderByDesc('created_at')
             ->paginate(10)
-            ->withQueryString();
+            ->through(fn ($item) => [
+                'id' => $item->id,
+                'reservation_number' => $item->reservation_number,
+                'status' => $item->status,
+                'total_amount' => $item->total_amount,
+                'formatted_total_amount' => 'Rp ' . number_format($item->total_amount ?? 0, 0, ',', '.'),
+                'formatted_subtotal' => 'Rp ' . number_format($item->subtotal ?? 0, 0, ',', '.'),
+                'formatted_tax_amount' => 'Rp ' . number_format($item->tax_amount ?? 0, 0, ',', '.'),
+                'user' => $item->user,
+                'car' => $item->car,
+                'created_at' => $item->created_at->format('d M Y'),
+            ]);
 
+        // Buat metadata status untuk filter
         $statuses = collect(ReservationStatus::cases())->mapWithKeys(function ($st) use ($statusCounts) {
             $meta = ReservationStatus::getMeta();
             $statusMeta = collect($meta)->firstWhere('value', $st->value);
@@ -87,8 +100,27 @@ class ReservationsController extends Controller
     {
         $reservation->load(['user', 'car', 'payments']);
 
+        $formatted = [
+            'id' => $reservation->id,
+            'reservation_number' => $reservation->reservation_number,
+            'status' => $reservation->status,
+            'start_date' => $reservation->start_date,
+            'end_date' => $reservation->end_date,
+            'pickup_location' => $reservation->pickup_location,
+            'return_location' => $reservation->return_location,
+            'notes' => $reservation->notes,
+            'discount_amount' => $reservation->discount_amount,
+            'total_amount' => $reservation->total_amount,
+            'formatted_total_amount' => 'Rp ' . number_format($reservation->total_amount ?? 0, 0, ',', '.'),
+            'formatted_subtotal' => 'Rp ' . number_format($reservation->subtotal ?? 0, 0, ',', '.'),
+            'formatted_tax_amount' => 'Rp ' . number_format($reservation->tax_amount ?? 0, 0, ',', '.'),
+            'user' => $reservation->user,
+            'car' => $reservation->car,
+            'payments' => $reservation->payments,
+        ];
+
         return Inertia::render('Admin/Reservations/Show', [
-            'reservation' => $reservation,
+            'reservation' => $formatted,
             'statusMeta' => ReservationStatus::getMeta(),
             'paymentStatusMeta' => PaymentStatus::getMeta(),
         ]);
@@ -127,27 +159,26 @@ class ReservationsController extends Controller
             'cancellation_reason' => ['nullable', 'string'],
         ]);
 
-        // Restrict this action
+        // Restrict update for demo
         return redirect()
             ->back()
             ->with('restricted_action', 'This is a demo version. For security reasons, create, update, and delete actions are disabled.');
 
-
+        // Update logic (disabled in demo)
         $reservation->fill($validated);
-
-        // Recalculate totals when dates or discount change
         $start = Carbon::parse($validated['start_date']);
         $end = Carbon::parse($validated['end_date']);
         $totalDays = $start->diffInDays($end) + 1;
+
         $reservation->total_days = $totalDays;
         $reservation->subtotal = $reservation->daily_rate * $totalDays;
         $reservation->tax_amount = round($reservation->subtotal * 0.21, 2);
         $reservation->total_amount = $reservation->subtotal + $reservation->tax_amount - (float)($reservation->discount_amount ?? 0);
 
-        // Maintain cancellation metadata
         if ($reservation->status === ReservationStatus::CANCELLED && !$reservation->cancelled_at) {
             $reservation->cancelled_at = now();
         }
+
         if ($reservation->status !== ReservationStatus::CANCELLED) {
             $reservation->cancellation_reason = null;
             $reservation->cancelled_at = null;
@@ -171,10 +202,9 @@ class ReservationsController extends Controller
             'reservation' => $reservation,
             'statusMeta' => ReservationStatus::getMeta(),
             'paymentStatusMeta' => PaymentStatus::getMeta(),
-            'currency' => config('app.currency_symbol'),
+            'currency' => 'Rp',
         ])->setPaper('a4', 'portrait');
 
         return $pdf->download($reservation->reservation_number . '.pdf');
     }
-
 }

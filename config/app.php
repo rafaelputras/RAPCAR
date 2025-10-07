@@ -124,6 +124,9 @@ return [
     ],
 
     // Currency
-    'currency_symbol' => env('APP_CURRENCY_SYMBOL', '$'),
-    'currency_code' => env('APP_CURRENCY_CODE', 'USD'),
+    // Currency
+'currency_symbol' => env('APP_CURRENCY_SYMBOL', 'Rp'),
+'currency_code' => env('APP_CURRENCY_CODE', 'IDR'),
+'currency_locale' => env('APP_CURRENCY_LOCALE', 'en-US'),
+
 ];
