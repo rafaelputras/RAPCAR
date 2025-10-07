@@ -373,7 +373,7 @@ import { contact } from '@/routes'
                             <h4
                                 class="mb-1 text-xl font-semibold text-gray-900"
                             >
-                                Slash Botol Kecap
+                                Rafael suka hewan
                             </h4>
                             <p class="mb-2 font-medium text-blue-500">
                                 Manager
@@ -393,7 +393,7 @@ import { contact } from '@/routes'
                             <h4
                                 class="mb-1 text-xl font-semibold text-gray-900"
                             >
-                                Cristiano Lionel Tegar
+                                Ryan Giggs
                             </h4>
                             <p class="mb-2 font-medium text-blue-500">
                                 Kepala toko
