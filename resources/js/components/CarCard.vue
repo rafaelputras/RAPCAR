@@ -7,21 +7,31 @@ interface Car {
     make: string;
     model: string;
     year: number;
-    price_per_day: string;
+    price_per_day: number;
     description: string;
     fuel_type: string;
-    image_url: string;
+    picture?: string; // optional
 }
 
 interface Props {
     car: Car;
 }
 
+const props = defineProps<Props>();
+
 const bookCar = (carId: number) => {
     router.get(show(carId).url);
 };
 
-defineProps<Props>();
+const getImageUrl = (car: Car) => {
+    // Prioritas: pakai picture dari DB kalau ada → kalau tidak, pakai id.jpeg
+    return `/images/cars/${car.picture || car.id + '.jpeg'}`;
+};
+
+const handleImageError = (event: Event) => {
+    const target = event.target as HTMLImageElement;
+    target.src = '/images/cars/default.jpeg';
+};
 </script>
 
 <template>
@@ -33,19 +43,20 @@ defineProps<Props>();
             class="relative h-56 overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100"
         >
             <img
-                :src="car.image_url"
+                :src="getImageUrl(car)"
                 :alt="`${car.make} ${car.model}`"
                 class="h-full w-full object-cover transition-all duration-500 group-hover:scale-[1.03]"
+                @error="handleImageError"
             />
 
             <!-- Price Badge -->
             <div
                 class="absolute top-4 right-4 rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 px-4 py-2 shadow-lg"
             >
-                <span class="text-sm font-bold text-white"
-                    >${{ car.price_per_day }}</span
-                >
-                <span class="text-xs text-blue-100">/day</span>
+                <span class="text-sm font-bold text-white">
+                    Rp {{ car.price_per_day.toLocaleString('id-ID') }}
+                </span>
+                <span class="text-xs text-blue-100">/hari</span>
             </div>
 
             <!-- Gradient Overlay -->
@@ -54,14 +65,14 @@ defineProps<Props>();
             ></div>
         </div>
 
-        <!--  Car Details -->
-        <div class=" space-y-4 p-4">
+        <!-- Car Details -->
+        <div class="space-y-4 p-4">
             <!-- Header -->
             <div class="space-y-2">
                 <h3
                     class="text-xl font-bold text-gray-900 transition-colors group-hover:text-blue-600"
                 >
-                    {{ car.make }} {{ car.model }} - {{ car.year }} - {{ car.id }}
+                    {{ car.make }} {{ car.model }} - {{ car.year }}
                 </h3>
 
                 <div class="flex items-center gap-2">
@@ -95,8 +106,9 @@ defineProps<Props>();
                 {{ car.description }}
             </p>
         </div>
-        <!--  Book Button -->
-        <div class=" p-4">
+
+        <!-- Book Button -->
+        <div class="p-4">
             <button
                 @click="bookCar(car.id)"
                 class="group/btn w-full cursor-pointer rounded-xl bg-gradient-to-r from-slate-700 to-slate-900 px-6 py-3.5 font-semibold text-white shadow-lg transition-all duration-200 hover:from-blue-600 hover:to-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none"
