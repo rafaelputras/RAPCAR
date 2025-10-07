@@ -256,7 +256,7 @@ const commonLocations = [
                                             class="rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 px-4 py-2 text-white"
                                         >
                                             <span class="text-3xl font-bold"
-                                                >${{ car.price_per_day }}</span
+                                                >Rp.{{ car.price_per_day }}</span
                                             >
                                             <span
                                                 class="block text-sm text-blue-100"
@@ -542,7 +542,7 @@ const commonLocations = [
                                             >Daily Rate</span
                                         >
                                         <span class="font-bold text-gray-900"
-                                            >${{ car.price_per_day }}</span
+                                            >Rp.{{ car.price_per_day }}</span
                                         >
                                     </div>
                                 </div>
@@ -557,7 +557,7 @@ const commonLocations = [
                                         <span
                                             class="text-lg font-bold text-gray-900"
                                         >
-                                            ${{
+                                            Rp{{
                                                 rentalDays > 0
                                                     ? subtotal.toFixed(2)
                                                     : '0.00'
@@ -574,7 +574,7 @@ const commonLocations = [
                                         <span
                                             class="text-lg font-bold text-gray-900"
                                         >
-                                            ${{
+                                            Rp. {{
                                                 rentalDays > 0
                                                     ? tax.toFixed(2)
                                                     : '0.00'
@@ -595,7 +595,7 @@ const commonLocations = [
                                             <span
                                                 class="text-2xl font-bold text-blue-500"
                                             >
-                                                ${{
+                                                Rp. {{
                                                     rentalDays > 0
                                                         ? total.toFixed(2)
                                                         : '0.00'
