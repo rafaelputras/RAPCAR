@@ -13,6 +13,11 @@ interface Car {
     picture?: string; // optional
 }
 
+const formatPrice = (value: number | string) => {
+    const num = Number(value);
+    return num.toLocaleString('id-ID'); // hasil: 1,000,000
+};
+
 interface Props {
     car: Car;
 }
@@ -54,7 +59,7 @@ const handleImageError = (event: Event) => {
                 class="absolute top-4 right-4 rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 px-4 py-2 shadow-lg"
             >
                 <span class="text-sm font-bold text-white">
-                    Rp {{ car.price_per_day.toLocaleString('id-ID') }}
+                    Rp {{ formatPrice (car.price_per_day.toLocaleString('id-ID')) }}
                 </span>
                 <span class="text-xs text-blue-100">/hari</span>
             </div>
