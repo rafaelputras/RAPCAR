@@ -127,13 +127,13 @@ const handleImageError = (event: Event) => {
 
 
 const commonLocations = [
-    'Downtown Office',
-    'Airport Terminal 1',
-    'Airport Terminal 2',
-    'Central Station',
-    'Mall Plaza',
-    'Hotel District',
-    'Business District',
+    'Universitas SCU',
+    'DP MALL',
+    'Masjid Agung',
+    'Hotel Citraland',
+    'Tembalang',
+    'Central City',
+    'SMP Mataram',
 ];
 </script>
 <template>
