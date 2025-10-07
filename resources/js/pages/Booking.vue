@@ -22,6 +22,11 @@ interface Car {
 const $page = usePage();
 const car = computed<Car>(() => $page.props.car as Car);
 
+const formatPrice = (value: number | string) => {
+    const num = Number(value);
+    return num.toLocaleString('id-ID'); // hasil: 1,000,000
+};
+
 const form = useForm({
     start_date: '',
     end_date: '',
@@ -97,16 +102,29 @@ watch(
 );
 
 const images = computed(() => {
+    // Jika data mobil punya banyak gambar (misal array di DB)
     if (car.value.images && car.value.images.length > 0) {
-        return car.value.images;
+        return car.value.images.map((img) => ({
+            url: img.url || `/images/cars/${car.value.id}.jpeg`,
+            alt: img.alt || `${car.value.make} ${car.value.model}`,
+        }));
     }
+
+    // fallback: langsung ambil dari folder publik Laravel
     return [
         {
-            url: car.value.image_url,
+            url: `/images/cars/${car.value.id}.jpeg`,
             alt: `${car.value.make} ${car.value.model}`,
         },
     ];
 });
+
+// fallback handler kalau gambar gagal dimuat
+const handleImageError = (event: Event) => {
+    const target = event.target as HTMLImageElement;
+    target.src = '/images/cars/default.jpeg';
+};
+
 
 const commonLocations = [
     'Downtown Office',
@@ -256,7 +274,7 @@ const commonLocations = [
                                             class="rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 px-4 py-2 text-white"
                                         >
                                             <span class="text-3xl font-bold"
-                                                >Rp.{{ car.price_per_day }}</span
+                                                >Rp {{ formatPrice(car.price_per_day) }}</span
                                             >
                                             <span
                                                 class="block text-sm text-blue-100"
@@ -542,7 +560,7 @@ const commonLocations = [
                                             >Daily Rate</span
                                         >
                                         <span class="font-bold text-gray-900"
-                                            >Rp.{{ car.price_per_day }}</span
+                                            >Rp {{ formatPrice(total) }}</span
                                         >
                                     </div>
                                 </div>
@@ -559,7 +577,7 @@ const commonLocations = [
                                         >
                                             Rp{{
                                                 rentalDays > 0
-                                                    ? subtotal.toFixed(2)
+                                                    ? formatPrice(subtotal.toFixed(2))
                                                     : '0.00'
                                             }}
                                         </span>
@@ -576,7 +594,7 @@ const commonLocations = [
                                         >
                                             Rp. {{
                                                 rentalDays > 0
-                                                    ? tax.toFixed(2)
+                                                    ? formatPrice(tax.toFixed(2))
                                                     : '0.00'
                                             }}
                                         </span>
@@ -597,7 +615,7 @@ const commonLocations = [
                                             >
                                                 Rp. {{
                                                     rentalDays > 0
-                                                        ? total.toFixed(2)
+                                                        ? formatPrice(total.toFixed(2))
                                                         : '0.00'
                                                 }}
                                             </span>
