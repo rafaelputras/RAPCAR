@@ -261,17 +261,15 @@ const homeCars = $page.props.homeCars as Car[];
                         <h2
                             class="mb-6 text-4xl font-bold text-gray-900 lg:text-5xl"
                         >
-                            Why Choose
+                            Kenapa memilih
                             <span
                                 class="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent"
                             >
-                                RealRent </span
+                                RAP </span
                             >?
                         </h2>
                         <p class="mx-auto max-w-2xl text-xl text-gray-600">
-                            We're committed to providing an unparalleled car
-                            rental experience with premium service at every
-                            touchpoint.
+                            Kami berkomitmen untuk memberikan pengalaman sewa mobil yang tak tertandingi dengan layanan terbaik di setiap tahap.Kami berkomitmen untuk memberikan pengalaman sewa mobil yang tak tertandingi dengan layanan terbaik di setiap tahap.
                         </p>
                     </div>
 
@@ -298,9 +296,7 @@ const homeCars = $page.props.homeCars as Car[];
                                 Premium Quality
                             </h3>
                             <p class="leading-relaxed text-gray-600">
-                                Every vehicle undergoes comprehensive inspection
-                                and maintenance to guarantee your safety,
-                                comfort, and peace of mind.
+                                Setiap kendaraan melewati pemeriksaan dan perawatan menyeluruh untuk menjamin keselamatan, kenyamanan, dan ketenangan Anda.
                             </p>
                         </div>
 
@@ -326,9 +322,7 @@ const homeCars = $page.props.homeCars as Car[];
                                 24/7 Support
                             </h3>
                             <p class="leading-relaxed text-gray-600">
-                                Our dedicated support team is available around
-                                the clock to assist you with any questions or
-                                concerns during your rental.
+                                Tim dukungan kami siap sedia 24 jam untuk membantu Anda dengan segala pertanyaan atau kendala selama masa sewa.
                             </p>
                         </div>
 
@@ -354,9 +348,7 @@ const homeCars = $page.props.homeCars as Car[];
                                 Best Value
                             </h3>
                             <p class="leading-relaxed text-gray-600">
-                                Transparent pricing with no hidden fees. Get
-                                premium car rental services at competitive rates
-                                with exceptional value.
+                                Harga transparan tanpa biaya tersembunyi. Nikmati layanan sewa mobil premium dengan tarif bersaing dan nilai yang luar biasa.
                             </p>
                         </div>
                     </div>
