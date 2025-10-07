@@ -326,7 +326,7 @@ const hasActiveFilters = computed(() => {
                                             <div class="relative">
                                                 <span
                                                     class="absolute top-1/2 left-3 -translate-y-1/2 text-gray-500"
-                                                    >Rp </span
+                                                    >Rp</span
                                                 >
                                                 <input
                                                     v-model="maxPrice"
