@@ -18,10 +18,11 @@ interface Reservation {
     status: string;
     created_at: string;
     car: {
+        id: number; // ID Mobil dari database DITAMBAHKAN
         make: string;
         model: string;
         year: number;
-        image_url: string;
+        image_url: string; 
         description: string;
         fuel_type: string;
     };
@@ -37,13 +38,32 @@ interface PageProps {
 
 const $page = usePage<PageProps>();
 const reservation = $page.props.reservation;
+
+/**
+ * Format angka menjadi Rupiah (IDR).
+ * @param amount String representasi dari jumlah total.
+ */
+const formatToRupiah = (amount: string): string => {
+    // Ubah string ke number
+    const numberAmount = parseFloat(amount);
+    
+    // Gunakan Intl.NumberFormat untuk format Rupiah Indonesia
+    return new Intl.NumberFormat('id-ID', {
+        style: 'currency',
+        currency: 'IDR',
+        minimumFractionDigits: 0, 
+        maximumFractionDigits: 0,
+    }).format(numberAmount);
+};
+
+// MENGAMBIL ID MOBIL DARI OBJECT CAR
+const carImagePath = `/images/cars/${reservation.car.id}.jpeg`; 
 </script>
 
 <template>
     <HomeLayout>
         <div class="min-h-screen bg-white py-12">
             <div class="mx-auto max-w-7xl px-6">
-                <!-- Clean success header with minimal styling -->
                 <div class="mb-12 text-center">
                     <div
                         class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-green-100"
@@ -70,11 +90,8 @@ const reservation = $page.props.reservation;
                     </p>
                 </div>
 
-                <!-- Clean two-column layout with proper alignment -->
                 <div class="grid gap-8 lg:grid-cols-3">
-                    <!-- Main Details -->
                     <div class="space-y-8 lg:col-span-2">
-                        <!-- Car Information -->
                         <div class="rounded-lg border border-gray-200 p-6">
                             <h2
                                 class="mb-6 text-xl font-semibold text-gray-900"
@@ -83,7 +100,7 @@ const reservation = $page.props.reservation;
                             </h2>
                             <div class="flex items-start space-x-6">
                                 <img
-                                    :src="reservation.car.image_url"
+                                    :src="carImagePath"
                                     :alt="`${reservation.car.make} ${reservation.car.model}`"
                                     class="h-24 w-32 rounded-lg object-cover"
                                 />
@@ -104,7 +121,6 @@ const reservation = $page.props.reservation;
                             </div>
                         </div>
 
-                        <!-- Rental Details -->
                         <div class="rounded-lg border border-gray-200 p-6">
                             <h2
                                 class="mb-6 text-xl font-semibold text-gray-900"
@@ -124,7 +140,11 @@ const reservation = $page.props.reservation;
                                             <span class="font-medium">{{
                                                 new Date(
                                                     reservation.start_date,
-                                                ).toLocaleDateString()
+                                                ).toLocaleDateString('id-ID', {
+                                                    year: 'numeric',
+                                                    month: 'long',
+                                                    day: 'numeric',
+                                                })
                                             }}</span>
                                         </div>
                                         <div class="flex justify-between">
@@ -134,7 +154,11 @@ const reservation = $page.props.reservation;
                                             <span class="font-medium">{{
                                                 new Date(
                                                     reservation.end_date,
-                                                ).toLocaleDateString()
+                                                ).toLocaleDateString('id-ID', {
+                                                    year: 'numeric',
+                                                    month: 'long',
+                                                    day: 'numeric',
+                                                })
                                             }}</span>
                                         </div>
                                     </div>
@@ -166,7 +190,6 @@ const reservation = $page.props.reservation;
                             </div>
                         </div>
 
-                        <!-- Contact Information -->
                         <div class="rounded-lg border border-gray-200 p-6">
                             <h2
                                 class="mb-6 text-xl font-semibold text-gray-900"
@@ -174,27 +197,25 @@ const reservation = $page.props.reservation;
                                 Contact Details
                             </h2>
                             <div class="grid gap-8 md:grid-cols-2">
-                                    <div class="flex gap-2">
-                                        <span class="text-gray-600">Name:</span>
-                                        <span class="font-medium">{{
-                                            reservation.user.name
-                                        }}</span>
-                                    </div>
-                                    <div class="flex gap-2">
-                                        <span class="text-gray-600"
-                                            >Email:</span
-                                        >
-                                        <span class="font-medium">{{
-                                            reservation.user.email
-                                        }}</span>
-                                    </div>
+                                        <div class="flex gap-2">
+                                            <span class="text-gray-600">Name:</span>
+                                            <span class="font-medium">{{
+                                                reservation.user.name
+                                            }}</span>
+                                        </div>
+                                        <div class="flex gap-2">
+                                            <span class="text-gray-600"
+                                                >Email:</span
+                                            >
+                                            <span class="font-medium">{{
+                                                reservation.user.email
+                                            }}</span>
+                                        </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Clean sidebar with price summary and next steps -->
                     <div class="space-y-6">
-                        <!-- Price Summary -->
                         <div class="rounded-lg border border-gray-200 p-6">
                             <h2
                                 class="mb-4 text-xl font-semibold text-gray-900"
@@ -221,18 +242,13 @@ const reservation = $page.props.reservation;
                                         <span
                                             class="text-2xl font-bold text-blue-500"
                                         >
-                                            ${{
-                                                parseFloat(
-                                                    reservation.total_amount,
-                                                ).toFixed(2)
-                                            }}
+                                            {{ formatToRupiah(reservation.total_amount) }}
                                         </span>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Next Steps -->
                         <div class="rounded-lg border border-gray-200 p-6">
                             <h2
                                 class="mb-4 text-xl font-semibold text-gray-900"
@@ -246,8 +262,8 @@ const reservation = $page.props.reservation;
                                         >1</span
                                     >
                                     <span
-                                        >We'll review your booking within 24
-                                        hours</span
+                                        >Kami akan meninjau pesanan Anda dalam 24
+                                        jam</span
                                     >
                                 </div>
                                 <div class="flex items-start space-x-3">
@@ -256,8 +272,8 @@ const reservation = $page.props.reservation;
                                         >2</span
                                     >
                                     <span
-                                        >You'll receive confirmation email with
-                                        payment details</span
+                                        >Anda akan menerima email konfirmasi
+                                        dengan detail pembayaran</span
                                     >
                                 </div>
                                 <div class="flex items-start space-x-3">
@@ -266,14 +282,13 @@ const reservation = $page.props.reservation;
                                         >3</span
                                     >
                                     <span
-                                        >Bring your license and confirmation on
-                                        pickup day</span
+                                        >Bawa SIM Anda dan konfirmasi pada
+                                        hari pengambilan</span
                                     >
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Action Buttons -->
                         <div class="space-y-3">
                             <a
                                 :href="index.url()"
