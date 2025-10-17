@@ -30,7 +30,7 @@
             }
         </style>
 
-        <title inertia>{{ config('app.name', 'Laravel') }}</title>
+        <title inertia>{{ config('app.name', 'RAP Rental') }}</title>
 
         <link rel="icon" href="logo/logi.png" sizes="any">
 
